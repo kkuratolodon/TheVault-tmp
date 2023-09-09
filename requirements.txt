@@ -4,5 +4,4 @@ whitenoise
 psycopg2-binary
 requests
 urllib3
-zlib
-pillow
+pillow==9.5.0
