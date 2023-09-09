@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background: gray;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>{{nama_aplikasi}}</title>
+</head>
+<body>
+    <h1><b>{{nama_aplikasi}}</b></h1>
+    <p><b>Nama: {{nama}}</b></p>
+    <p><b>Kelas: {{kelas}}</b></p>
+    <ul>
+        {% for album in albums %}
+                <li>
+                    <h2>{{ album.name }}</h2>
+                    <img src="{{ album.image.url }}" alt="{{ album.name }}" width="200" height="200">
+                    <p>Amount: {{ album.amount }}</p>
+                    <p>Price: Rp{{ album.price }}</p>
+                    <p>Description: {{ album.description }}</p>
+                </li>
+        {% empty %}
+            <p>Tidak ada album yang tersedia.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
